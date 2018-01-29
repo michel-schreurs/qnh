@@ -1,8 +1,7 @@
-# QNH - training ES6, TypeScript, NodeJS en Angular
-Slides, voorbeeldcode en extra informatie bij de incompany training NodeJS, ES6, TypeScript en Angular - QNH, Oktober 2017.
+# QNH - training Angular Advanced - voorjaar 2018
+Slides, voorbeeldcode en extra informatie bij de incompany training Angular Advanced - QNH, voorjaar 2018.
 
 ## Links uit de training
-- https://netbasal.com/create-and-test-decorators-in-javascript-85e8d5cf879c - Schrijf je eigen decorators : Create and test Decorators in JavaScript
-- https://medium.com/@feloy/creating-your-own-application-template-for-angular-cli-95e22319cc24 - Je eigen schema samenstellen voor gebruik met Angular CLI. ("Creating your own application template for angular-cli")
+* Code examples Angular Advanced: https://github.com/PeterKassenaar/AngularAdvanced
 
 Vragen? Peter Kassenaar - info@kassenaar.com
