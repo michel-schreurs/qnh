@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="col-md-4">
+        <!--Input new city-->
+        <input #newCity
+               (keyup.enter)="addCity(newCity)"
+               class="input-lg" placeholder="city name...">
+        <button (click)="addCity(newCity)" class="btn btn-primary">
+            Add city
+        </button>
+    </div>
+    <div class="col-md-4">
+        <h2>List of cities </h2>
+        <div>(numCities$: {{ numCities$ | async }})</div>
+        <button class="btn btn-success"
+                (click)="loadCities()">Load initial list of cities
+        </button>
+        <!--List of current cities-->
+        <ul class="list-group">
+            <li class="list-group-item"
+                *ngFor="let city of cities$| async">
+                <a (click)="editCity(city)">{{city | json }} </a>
+                <button (click)="removeCity(city)"
+                        class="btn btn-sm btn-danger pull-right">
+                    Remove
+                </button>
+            </li>
+        </ul>
+
+    </div>
+    <div class="col-md-4">
+        <!--Edit a city-->
+        <div *ngIf="selectedCity$ | async as city">
+            <input [value]="city.name"
+                   #txtEditCity
+                   (keyup.enter)="saveCity(txtEditCity)"
+                   class="input-lg"><br>
+            <button (click)="saveCity(txtEditCity)" class="btn btn-success">
+                Save
+            </button>
+            <button (click)="cancel()" class="btn btn-default">
+                Cancel
+            </button>
+        </div>
+    </div>
+</div>
